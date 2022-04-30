@@ -13,7 +13,7 @@ COPY Pipfile* ./
 
 RUN apt update -y && apt upgrade -y && apt install git python3 python3-pip nodejs npm ffmpeg -y
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get build-essential g++ -y && \
+RUN apt-get update -y && apt-get upgrade -y && apt-get install build-essential g++ -y && \
     pip install --no-cache-dir pipenv && \
     pipenv install --system --deploy --clear && \
     pip uninstall pipenv -y && \
