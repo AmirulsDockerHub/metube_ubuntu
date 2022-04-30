@@ -41,4 +41,4 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/amd64
-          tags: ghcr.io/amirulandalib/metube:latest
+          tags: ghcr.io/amirulsdockerhub/metube:latest
