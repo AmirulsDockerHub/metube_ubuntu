@@ -2,7 +2,7 @@ FROM ubuntu:latest as builder
 
 WORKDIR /metube
 COPY ui ./
-RUN apt update -y && apt upgrade-y && apt install git python3 python python3-pip nodejs npm && npm ci && node_modules/.bin/ng build --prod
+RUN apt update -y && apt upgrade -y && apt install git python3 python python3-pip nodejs npm && npm ci && node_modules/.bin/ng build --prod
 
 
 FROM ubuntu:latest
