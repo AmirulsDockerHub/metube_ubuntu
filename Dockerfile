@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as builder
+FROM ubuntu:22.04 as builder
 
 # ENV
 ARG DEBIAN_FRONTEND=noninteractive
@@ -11,7 +11,7 @@ COPY ui ./
 RUN apt update -y && apt upgrade -y && apt install git python3 python3-pip nodejs npm -y && npm ci && node_modules/.bin/ng build --prod
 
 
-FROM ubuntu:21.10
+FROM ubuntu:22.04
 
 # ENV
 ARG DEBIAN_FRONTEND=noninteractive
