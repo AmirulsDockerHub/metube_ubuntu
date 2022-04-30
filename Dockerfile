@@ -1,4 +1,4 @@
-FROM ubuntu:latest as builder
+FROM ubuntu:20.04 as builder
 
 WORKDIR /metube
 COPY ui ./
