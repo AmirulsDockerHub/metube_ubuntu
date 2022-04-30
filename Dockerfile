@@ -5,7 +5,7 @@ COPY ui ./
 RUN apt update -y && apt upgrade -y && apt install git python3 python3-pip nodejs npm -y && npm ci && node_modules/.bin/ng build --prod
 
 
-FROM ubuntu:20.04
+FROM ubuntu:21.10
 
 WORKDIR /app
 
