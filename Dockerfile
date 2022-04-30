@@ -1,23 +1,23 @@
-FROM node:lts-alpine as builder
+FROM ubuntu:latest as builder
 
 WORKDIR /metube
 COPY ui ./
-RUN npm ci && \
-    node_modules/.bin/ng build --prod
+RUN apt update -y && apt upgrade-y && apt install git python3 python python3-pip nodejs npm && npm ci && node_modules/.bin/ng build --prod
 
 
-FROM python:3.8-alpine
+FROM ubuntu:latest
 
 WORKDIR /app
 
 COPY Pipfile* ./
 
-RUN apk add --update ffmpeg && \
-    apk add --update --virtual .build-deps gcc g++ musl-dev && \
+RUN apt update -y && apt upgrade-y && apt install git python3 python python3-pip nodejs npm ffmpeg
+
+RUN apt-get build-dep gcc g++ && \
     pip install --no-cache-dir pipenv && \
     pipenv install --system --deploy --clear && \
     pip uninstall pipenv -y && \
-    apk del .build-deps && \
+    apt-get build-dep && \
     rm -rf /var/cache/apk/*
 
 COPY favicon ./favicon
