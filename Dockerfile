@@ -13,12 +13,12 @@ COPY Pipfile* ./
 
 RUN apt update -y && apt upgrade -y && apt install git python3 python3-pip nodejs npm ffmpeg -y
 
-RUN apt-get build-dep gcc g++ -y && \
+RUN cp /etc/apt/sources.list /etc/apt/sources.list~ && sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list && apt-get update && apt-get build-dep gcc g++ -y && \
     pip install --no-cache-dir pipenv && \
     pipenv install --system --deploy --clear && \
     pip uninstall pipenv -y && \
     apt-get build-dep && \
-    rm -rf /var/cache/apk/*
+    rm -rf /var/cache/apt/*
 
 COPY favicon ./favicon
 COPY app ./app
