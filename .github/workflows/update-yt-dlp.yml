@@ -1,6 +1,12 @@
 name: update-yt-dlp
 
 on:
+
+  push:
+
+    branches:
+
+      - master
   schedule:
     - cron: '0 0 * * *'
 

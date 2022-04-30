@@ -2,7 +2,7 @@ FROM ubuntu:latest as builder
 
 WORKDIR /metube
 COPY ui ./
-RUN apt update -y && apt upgrade -y && apt install git python3 python python3-pip nodejs npm && npm ci && node_modules/.bin/ng build --prod
+RUN apt update -y && apt upgrade -y && apt install git python3 python python3-pip nodejs npm -y && npm ci && node_modules/.bin/ng build --prod
 
 
 FROM ubuntu:latest
@@ -11,9 +11,9 @@ WORKDIR /app
 
 COPY Pipfile* ./
 
-RUN apt update -y && apt upgrade-y && apt install git python3 python python3-pip nodejs npm ffmpeg
+RUN apt update -y && apt upgrade -y && apt install git python3 python python3-pip nodejs npm ffmpeg -y
 
-RUN apt-get build-dep gcc g++ && \
+RUN apt-get build-dep gcc g++ -y && \
     pip install --no-cache-dir pipenv && \
     pipenv install --system --deploy --clear && \
     pip uninstall pipenv -y && \
