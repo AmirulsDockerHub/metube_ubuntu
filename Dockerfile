@@ -1,11 +1,23 @@
 FROM ubuntu:20.04 as builder
 
+# ENV
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ Asia/Dhaka
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV LANG C.UTF-8
+
 WORKDIR /metube
 COPY ui ./
 RUN apt update -y && apt upgrade -y && apt install git python3 python3-pip nodejs npm -y && npm ci && node_modules/.bin/ng build --prod
 
 
 FROM ubuntu:21.10
+
+# ENV
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ Asia/Dhaka
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV LANG C.UTF-8
 
 WORKDIR /app
 
