@@ -99,7 +99,7 @@
                 "sha256:26e62109036cd181df6e6ad646f91f0dcfd05fe16d0cb924138ff2ab75d64e3a",
                 "sha256:78ed67db6c7b7ced4f98e495e572106d5c432a93e1ddd1bf475e1dc05f5b7df2"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==1.2.0"
         },
         "async-timeout": {
@@ -107,7 +107,7 @@
                 "sha256:2163e1640ddb52b7a8c80d0a67a08587e5d245cc9c553a74a847056bc2976b15",
                 "sha256:8ca1e4fcf50d07413d66d1a5e416e42cfdf5851c981d679a09851a6853383b3c"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==4.0.2"
         },
         "attrs": {
@@ -199,7 +199,7 @@
                 "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d",
                 "sha256:fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==2022.6.15"
         },
         "charset-normalizer": {
@@ -207,7 +207,7 @@
                 "sha256:5189b6f22b01957427f35b6a08d9a0bc45b46d3788ef5a92e978433c7a35f8a5",
                 "sha256:575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==2.1.0"
         },
         "frozenlist": {
@@ -397,7 +397,7 @@
                 "sha256:7454314a529bba20e745928601ffeaf101c1b5aca9a6c4e48ad397803d10ea0c",
                 "sha256:d8d8b072799c36cadcdcc2b40d2a560ce09797ab3d2d596b2ad519a5e4df19ae"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==4.3.4"
         },
         "python-socketio": {
@@ -529,11 +529,11 @@
         },
         "yt-dlp": {
             "hashes": [
-                "sha256:9a2ceb76a4cc48aa80127eff8a853d9c8b7efe8be121c2123dcbfd3d06bc945f",
-                "sha256:b84f94a01b0a743c14607cc27840b5a09daba16005372cce747455d8ca2f25fd"
+                "sha256:a01d3c7187683ec17db33ecd3b506436c7e94c5693002f059f76d32fb437083e",
+                "sha256:cc290ac8a1fec626841765fed12f7a1ebdfe01791ae5c5f3794edfce35d81843"
             ],
             "index": "pypi",
-            "version": "==2022.8.14"
+            "version": "==2022.8.19"
         }
     },
     "develop": {
@@ -630,11 +630,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:d73f8cd714a1a6691f5eb5abeeacbf313242b7aa2f5eba93776542c1aad90c6f",
-                "sha256:fe9a97f68b064a6ddd4bacfb0b4b93a4c65a556d97ce906255540439d0c35cef"
+                "sha256:10602cd0a6f5feab6656e9587f9075292ab777c5200f3bf00293ecd23d9f2788",
+                "sha256:d2e010624c781b26ad6629a8de9832327cf853dea93894487979e55f9ad06857"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==65.0.0"
+            "version": "==65.1.0"
         },
         "tomli": {
             "hashes": [
